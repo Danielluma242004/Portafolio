@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 import SplitType from "split-type";
 import gsap from "gsap";
 import scroll from "../media/scroll-down.svg";
