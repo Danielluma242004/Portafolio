@@ -6,7 +6,7 @@ export function Navigation() {
     setMenuOpen(!isMenuOpen);
   };
   return (
-    <div>
+    <div className="sticky top-0 z-50">
       <nav className="bg-gray-100">
         <header className="flex flex-wrap justify-between items-center py-3 text-lg px-8">
           <a className="text-cyan-700 font-semibold">D L</a>
@@ -44,6 +44,7 @@ export function Navigation() {
                 <a
                   href="#"
                   className="block py-2 px-3 rounded hover:bg-gray-100  md:text-cyan-700 md:p-0 active:bg-cyan-700 active:text-white active:md:bg-transparent active:md:text-gray-500"
+                  onClick={toggleMenu}
                 >
                   about
                 </a>
@@ -52,6 +53,7 @@ export function Navigation() {
                 <a
                   href="#"
                   className="block py-2 px-3 rounded hover:bg-gray-100 md:hover:text-cyan-700 md:p-0 active:bg-cyan-700 active:text-white active:md:bg-transparent active:md:text-gray-500"
+                  onClick={toggleMenu}
                 >
                   projects
                 </a>
@@ -60,6 +62,7 @@ export function Navigation() {
                 <a
                   href="#"
                   className="block py-2 px-3 rounded hover:bg-gray-100 md:hover:text-cyan-700 md:p-0 active:bg-cyan-700 active:text-white active:md:bg-transparent active:md:text-gray-500"
+                  onClick={toggleMenu}
                 >
                   contact
                 </a>

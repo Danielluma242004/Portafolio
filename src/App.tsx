@@ -8,7 +8,7 @@ import { Footer } from "./components/Footer";
 
 function App() {
   return (
-    <div className="min-h-screen overflow-y-auto">
+    <div>
       <Navigation />
       <Home />
       <About />
