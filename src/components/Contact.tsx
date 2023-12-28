@@ -14,7 +14,7 @@ export function Contact() {
             data-netlify="true"
             className="m-3 mb-0"
           >
-            <p className="font-bold text-cyan-700 text-3xl pb-5">
+            <p className="font-bold text-cyan-700 text-3xl pb-5 text-center md:text-left">
               Get in touch!
             </p>
             <div className="flex flex-col md:flex-row">
@@ -43,7 +43,7 @@ export function Contact() {
               ></textarea>
             </div>
             <div data-netlify-recaptcha="true"></div>
-            <div className="flex justify-end">
+            <div className="flex justify-center md:justify-end">
               <input
                 type="submit"
                 value="Send Message"
