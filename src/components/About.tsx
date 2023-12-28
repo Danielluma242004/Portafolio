@@ -173,7 +173,7 @@ export function About() {
               </div>
               <div>
                 <p className="font-bold my-2">Databases:</p>
-                <div className="flex flex-row justify-start md:justify-start justify-center">
+                <div className="flex flex-row md:justify-start justify-center">
                   <a
                     href="https://www.mysql.com/"
                     target="_blank"
