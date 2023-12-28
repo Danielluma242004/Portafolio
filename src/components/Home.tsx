@@ -36,12 +36,12 @@ export function Home() {
   return (
     <section className="min-h-screen flex flex-col items-center justify-center px-4 pt-6">
       <div className="flex flex-col items-center text-center">
-        <h1 className="p-1 font-bold text-7xl">
+        <h1 className="p-1 font-bold sm:text-7xl text-5xl">
           <span>Hi, my name is </span>
           <span className="text-cyan-700">Daniel Lucio!</span>
         </h1>
         <p
-          className="font-bold text-4xl mt-2"
+          className="font-bold sm:text-4xl text text-3xl mt-2"
           id="text"
           ref={textRef}
           style={{
@@ -51,7 +51,9 @@ export function Home() {
           <span className="text-cyan-700">Backend</span> Developer and{" "}
           <span className="text-cyan-700">Software</span> Engineer.
         </p>
-        <p className="p-10 text-2xl">If you are in troubles, I can help you!</p>
+        <p className="p-10 sm:text-2xl text-xl">
+          If you are in troubles, I can help you!
+        </p>
         <button className="bg-cyan-500 text-white hover:bg-cyan-600 font-bold py-2 px-4 rounded-full active:bg-cyan-700 text-lg">
           Contact me
         </button>
