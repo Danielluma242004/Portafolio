@@ -34,7 +34,7 @@ export function Home() {
   }, []);
 
   return (
-    <section className="min-h-screen flex flex-col items-center justify-center px-4">
+    <section className="min-h-screen flex flex-col items-center justify-center px-4 pt-6">
       <div className="flex flex-col items-center text-center">
         <h1 className="p-1 font-bold text-7xl">
           <span>Hi, my name is </span>

@@ -7,7 +7,7 @@ export function Navigation() {
   };
   return (
     <div className="sticky top-0 z-50">
-      <nav className="bg-gray-100">
+      <nav className="bg-gray-200">
         <header className="flex flex-wrap justify-between items-center py-3 text-lg px-8">
           <a className="text-cyan-700 font-semibold">D L</a>
           <button

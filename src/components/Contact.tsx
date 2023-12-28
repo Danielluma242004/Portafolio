@@ -1,6 +1,6 @@
 export function Contact() {
   return (
-    <div className="flex items-center justify-center h-screen">
+    <div className="flex items-center justify-center pb-10">
       <section className="max-w-5xl mx-4 flex flex-col w-full">
         <div className="flex items-center mb-8">
           <div className="h-px bg-gray-400 flex-grow"></div>
