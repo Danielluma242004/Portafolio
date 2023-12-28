@@ -8,7 +8,7 @@ export function Projects() {
       <section className="max-w-5xl mx-4 flex flex-col w-full">
         <div className="flex items-center mb-8">
           <div className="h-px bg-gray-400 flex-grow"></div>
-          <h2 className="mx-4 text-cyan-700 font-bold text-xl">Contact</h2>
+          <h2 className="mx-4 text-cyan-700 font-bold text-xl">Projects</h2>
           <div className="h-px bg-gray-400 flex-grow"></div>
         </div>
         <div className="w-full grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-3">
