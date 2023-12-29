@@ -1,7 +1,6 @@
 import { useEffect, useRef } from "react";
 import SplitType from "split-type";
 import gsap from "gsap";
-import scrollimg from "../media/scroll-down.svg";
 import { Link as ScrollLink, animateScroll as scroll } from "react-scroll";
 
 export function Home() {
