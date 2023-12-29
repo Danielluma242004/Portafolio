@@ -1,15 +1,35 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link as ScrollLink, animateScroll as scroll } from "react-scroll";
 
 export function Navigation() {
   const [isMenuOpen, setMenuOpen] = useState(false);
+  const [offset, setOffset] = useState(-50);
+
   const toggleMenu = () => {
     setMenuOpen(!isMenuOpen);
   };
+
   const scrollToTop = () => {
     scroll.scrollToTop();
     setMenuOpen(false);
   };
+
+  useEffect(() => {
+    const handleResize = () => {
+      // Ajustar el offset según el tamaño de la pantalla
+      const newOffset = window.innerWidth < 768 ? -270 : -100;
+      setOffset(newOffset);
+    };
+
+    // Configurar el event listener para cambios de tamaño
+    window.addEventListener("resize", handleResize);
+
+    // Llamar a handleResize al inicio para establecer el valor inicial
+    handleResize();
+
+    // Limpiar el event listener al desmontar el componente
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
   return (
     <div className="sticky top-0 z-50">
       <nav className="bg-gray-200">
@@ -58,7 +78,7 @@ export function Navigation() {
                   to="about"
                   smooth={true}
                   duration={500}
-                  offset={-100}
+                  offset={offset}
                   className="block py-2 px-3 rounded md:text-cyan-700 md:p-0 active:bg-cyan-700 active:text-white active:md:bg-transparent active:md:text-gray-500 cursor-pointer"
                   onClick={toggleMenu}
                 >
@@ -70,7 +90,7 @@ export function Navigation() {
                   to="projects"
                   smooth={true}
                   duration={500}
-                  offset={-100}
+                  offset={offset}
                   className="block py-2 px-3 rounded md:text-cyan-700 md:p-0 active:bg-cyan-700 active:text-white active:md:bg-transparent active:md:text-gray-500 cursor-pointer"
                   onClick={toggleMenu}
                 >
@@ -81,8 +101,8 @@ export function Navigation() {
                 <ScrollLink
                   to="contact"
                   smooth={true}
+                  offset={offset}
                   duration={500}
-                  offset={-100}
                   className="block py-2 px-3 rounded md:text-cyan-700 md:p-0 active:bg-cyan-700 active:text-white active:md:bg-transparent active:md:text-gray-500 cursor-pointer"
                   onClick={toggleMenu}
                 >
