@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link as ScrollLink, animateScroll as scroll } from "react-scroll";
+import dark_theme from "../media/dark_theme.svg";
 
 export function Navigation() {
   const [isMenuOpen, setMenuOpen] = useState(false);
@@ -30,86 +31,114 @@ export function Navigation() {
     // Limpiar el event listener al desmontar el componente
     return () => window.removeEventListener("resize", handleResize);
   }, []);
+
+  //Dark Mode
+
+  const [theme, setTheme] = useState(() => {
+    if (window.matchMedia("(prefers-color-scheme:dark)").matches) {
+      return "dark";
+    }
+    return "light";
+  });
+
+  useEffect(() => {
+    if (theme == "dark") {
+      document.querySelector("html")?.classList.add("dark");
+    } else {
+      document.querySelector("html")?.classList.remove("dark");
+    }
+  }, [theme]);
+
+  const handleChangueTheme = () => {
+    setTheme((prevTheme) => (prevTheme == "light" ? "dark" : "light"));
+  };
+
   return (
     <div className="sticky top-0 z-50">
-      <nav className="bg-gray-200">
+      <nav className="bg-gray-200 dark:bg-gray-800 ">
         <header className="flex flex-wrap justify-between items-center py-3 text-lg px-8">
           <ScrollLink
             to="/"
             onClick={scrollToTop}
-            className="text-cyan-700 font-semibold cursor-pointer"
+            className="text-cyan-700 dark:text-cyan-500 font-semibold cursor-pointer"
             smooth={true}
             duration={500}
           >
             D L
           </ScrollLink>
-          <button
-            type="button"
-            onClick={toggleMenu}
-            className={`inline-flex items-center w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-200 active:bg-gray-300 ${
-              isMenuOpen ? "bg-gray-200" : ""
-            }`}
-            aria-expanded={isMenuOpen}
-          >
-            <svg
-              className="w-5 h-5"
-              aria-hidden="true"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 17 14"
+
+          <div className="flex">
+            <button onClick={handleChangueTheme} className="mr-4">
+              <img src={dark_theme} className="w-10" alt="Toggle Theme" />
+            </button>
+            <button
+              type="button"
+              onClick={toggleMenu}
+              className={`inline-flex items-center w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-200 active:bg-gray-300 ${
+                isMenuOpen ? "bg-gray-200" : ""
+              }`}
+              aria-expanded={isMenuOpen}
             >
-              <path
-                stroke="currentColor"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M1 1h15M1 7h15M1 13h15"
-              />
-            </svg>
-          </button>
-          <div
-            className={`w-full md:block md:w-auto ${
-              isMenuOpen ? "block" : "hidden"
-            }`}
-          >
-            <ul className="font-medium flex flex-col p-4 md:p-2 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:bg-transparent md:flex-row md:space-x-11 rtl:space-x-reverse md:mt-0 md:border-0">
-              <li>
-                <ScrollLink
-                  to="about"
-                  smooth={true}
-                  duration={500}
-                  offset={offset}
-                  className="block py-2 px-3 rounded md:text-cyan-700 md:p-0 active:bg-cyan-700 active:text-white active:md:bg-transparent active:md:text-gray-500 cursor-pointer"
-                  onClick={toggleMenu}
-                >
-                  about
-                </ScrollLink>
-              </li>
-              <li>
-                <ScrollLink
-                  to="projects"
-                  smooth={true}
-                  duration={500}
-                  offset={offset}
-                  className="block py-2 px-3 rounded md:text-cyan-700 md:p-0 active:bg-cyan-700 active:text-white active:md:bg-transparent active:md:text-gray-500 cursor-pointer"
-                  onClick={toggleMenu}
-                >
-                  projects
-                </ScrollLink>
-              </li>
-              <li>
-                <ScrollLink
-                  to="contact"
-                  smooth={true}
-                  offset={offset}
-                  duration={500}
-                  className="block py-2 px-3 rounded md:text-cyan-700 md:p-0 active:bg-cyan-700 active:text-white active:md:bg-transparent active:md:text-gray-500 cursor-pointer"
-                  onClick={toggleMenu}
-                >
-                  contact
-                </ScrollLink>
-              </li>
-            </ul>
+              <svg
+                className="w-5 h-5"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 17 14"
+              >
+                <path
+                  stroke="currentColor"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M1 1h15M1 7h15M1 13h15"
+                />
+              </svg>
+            </button>
+            <div
+              className={`w-full md:block md:w-auto ${
+                isMenuOpen ? "block" : "hidden"
+              }`}
+            >
+              <ul className="font-medium flex flex-col p-4 md:p-2 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:bg-transparent md:flex-row md:space-x-11 rtl:space-x-reverse md:mt-0 md:border-0">
+                <li>
+                  <ScrollLink
+                    to="about"
+                    smooth={true}
+                    duration={500}
+                    offset={offset}
+                    className="block py-2 px-3 rounded md:text-cyan-700 md:p-0 active:bg-cyan-700 active:text-white active:md:bg-transparent active:md:text-gray-500 cursor-pointer"
+                    onClick={toggleMenu}
+                  >
+                    about
+                  </ScrollLink>
+                </li>
+                <li>
+                  <ScrollLink
+                    to="projects"
+                    smooth={true}
+                    duration={500}
+                    offset={offset}
+                    className="block py-2 px-3 rounded md:text-cyan-700 md:p-0 active:bg-cyan-700 active:text-white active:md:bg-transparent active:md:text-gray-500 cursor-pointer"
+                    onClick={toggleMenu}
+                  >
+                    projects
+                  </ScrollLink>
+                </li>
+                <li>
+                  <ScrollLink
+                    to="contact"
+                    smooth={true}
+                    offset={offset}
+                    duration={500}
+                    className="block py-2 px-3 rounded md:text-cyan-700 md:p-0 active:bg-cyan-700 active:text-white active:md:bg-transparent active:md:text-gray-500 cursor-pointer"
+                    onClick={toggleMenu}
+                  >
+                    contact
+                  </ScrollLink>
+                </li>
+              </ul>
+            </div>
           </div>
         </header>
       </nav>

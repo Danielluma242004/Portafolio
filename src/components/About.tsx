@@ -3,16 +3,18 @@ import cv from "../media/CV-Daniel_Lucio_Mireles_en.pdf";
 
 export function About() {
   return (
-    <div id="about" className="flex justify-center">
+    <div id="about" className="flex justify-center text-white">
       <section className="max-w-5xl mx-4 flex flex-col">
         <div className="flex items-center">
           <div className="h-px bg-gray-400 flex-grow"></div>
-          <h2 className="mx-4 text-cyan-700 font-bold text-xl">About me</h2>
+          <h2 className="mx-4 text-cyan-700 dark:text-cyan-500 font-bold text-xl">
+            About me
+          </h2>
           <div className="h-px bg-gray-400 flex-grow"></div>
         </div>
-        <div className="flex flex-col md:flex-row items-center bg-gray-100 rounded-3xl py-5 px-6 md:px-0 my-8">
+        <div className="flex flex-col md:flex-row items-center bg-gray-100 dark:bg-gray-900 rounded-3xl py-5 px-6 md:px-0 my-8">
           <div className="w-full md:w-1/2 text-center md:text-left md:mx-11 my-5">
-            <p className="font-bold text-cyan-700 text-3xl pb-5">
+            <p className="font-bold text-cyan-700 dark:text-cyan-500 text-3xl pb-5">
               Daniel Lucio
             </p>
             <p>
