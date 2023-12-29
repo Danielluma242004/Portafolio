@@ -1,15 +1,28 @@
 import { useState } from "react";
+import { Link as ScrollLink, animateScroll as scroll } from "react-scroll";
 
 export function Navigation() {
   const [isMenuOpen, setMenuOpen] = useState(false);
   const toggleMenu = () => {
     setMenuOpen(!isMenuOpen);
   };
+  const scrollToTop = () => {
+    scroll.scrollToTop();
+    setMenuOpen(false);
+  };
   return (
     <div className="sticky top-0 z-50">
       <nav className="bg-gray-200">
         <header className="flex flex-wrap justify-between items-center py-3 text-lg px-8">
-          <a className="text-cyan-700 font-semibold">D L</a>
+          <ScrollLink
+            to="/"
+            onClick={scrollToTop}
+            className="text-cyan-700 font-semibold cursor-pointer"
+            smooth={true}
+            duration={500}
+          >
+            D L
+          </ScrollLink>
           <button
             type="button"
             onClick={toggleMenu}
@@ -41,31 +54,40 @@ export function Navigation() {
           >
             <ul className="font-medium flex flex-col p-4 md:p-2 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:bg-transparent md:flex-row md:space-x-11 rtl:space-x-reverse md:mt-0 md:border-0">
               <li>
-                <a
-                  href="#"
-                  className="block py-2 px-3 rounded hover:bg-gray-100  md:text-cyan-700 md:p-0 active:bg-cyan-700 active:text-white active:md:bg-transparent active:md:text-gray-500"
+                <ScrollLink
+                  to="about"
+                  smooth={true}
+                  duration={500}
+                  offset={-100}
+                  className="block py-2 px-3 rounded md:text-cyan-700 md:p-0 active:bg-cyan-700 active:text-white active:md:bg-transparent active:md:text-gray-500 cursor-pointer"
                   onClick={toggleMenu}
                 >
                   about
-                </a>
+                </ScrollLink>
               </li>
               <li>
-                <a
-                  href="#"
-                  className="block py-2 px-3 rounded hover:bg-gray-100 md:hover:text-cyan-700 md:p-0 active:bg-cyan-700 active:text-white active:md:bg-transparent active:md:text-gray-500"
+                <ScrollLink
+                  to="projects"
+                  smooth={true}
+                  duration={500}
+                  offset={-100}
+                  className="block py-2 px-3 rounded md:text-cyan-700 md:p-0 active:bg-cyan-700 active:text-white active:md:bg-transparent active:md:text-gray-500 cursor-pointer"
                   onClick={toggleMenu}
                 >
                   projects
-                </a>
+                </ScrollLink>
               </li>
               <li>
-                <a
-                  href="#"
-                  className="block py-2 px-3 rounded hover:bg-gray-100 md:hover:text-cyan-700 md:p-0 active:bg-cyan-700 active:text-white active:md:bg-transparent active:md:text-gray-500"
+                <ScrollLink
+                  to="contact"
+                  smooth={true}
+                  duration={500}
+                  offset={-100}
+                  className="block py-2 px-3 rounded md:text-cyan-700 md:p-0 active:bg-cyan-700 active:text-white active:md:bg-transparent active:md:text-gray-500 cursor-pointer"
                   onClick={toggleMenu}
                 >
                   contact
-                </a>
+                </ScrollLink>
               </li>
             </ul>
           </div>

@@ -1,6 +1,6 @@
 export function Contact() {
   return (
-    <div className="flex items-center justify-center pb-10">
+    <div className="flex items-center justify-center pb-10" id="contact">
       <section className="max-w-5xl mx-4 flex flex-col w-full">
         <div className="flex items-center mb-8">
           <div className="h-px bg-gray-400 flex-grow"></div>
@@ -47,7 +47,7 @@ export function Contact() {
               <input
                 type="submit"
                 value="Send Message"
-                className="bg-cyan-500 hover:bg-cyan-600 active:bg-cyan-700 text-white font-bold py-2 px-4 rounded"
+                className="bg-cyan-500 hover:bg-cyan-600 active:bg-cyan-700 text-white font-bold py-2 px-4 rounded cursor-pointer"
               />
             </div>
           </form>

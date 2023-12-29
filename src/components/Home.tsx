@@ -1,7 +1,8 @@
 import { useEffect, useRef } from "react";
 import SplitType from "split-type";
 import gsap from "gsap";
-import scroll from "../media/scroll-down.svg";
+import scrollimg from "../media/scroll-down.svg";
+import { Link as ScrollLink, animateScroll as scroll } from "react-scroll";
 
 export function Home() {
   const textRef = useRef<HTMLParagraphElement>(null);
@@ -32,6 +33,9 @@ export function Home() {
       window.removeEventListener("load", initAnimation);
     };
   }, []);
+  const scrollToTop = () => {
+    scroll.scrollToTop();
+  };
 
   return (
     <section className="min-h-screen flex flex-col items-center justify-center px-4 pt-6">
@@ -54,12 +58,19 @@ export function Home() {
         <p className="p-10 sm:text-2xl text-xl">
           If you are in troubles, I can help you!
         </p>
-        <button className="bg-cyan-500 text-white hover:bg-cyan-600 font-bold py-2 px-4 rounded-full active:bg-cyan-700 text-lg">
+        <ScrollLink
+          to="contact"
+          onClick={scrollToTop}
+          className="bg-cyan-500 text-white hover:bg-cyan-600 font-bold py-2 px-4 rounded-full active:bg-cyan-700 text-lg cursor-pointer"
+          smooth={true}
+          duration={500}
+          offset={-100}
+        >
           Contact me
-        </button>
+        </ScrollLink>
         <div className="h-full flex flex-col items-center justify-center mt-16">
           <img
-            src={scroll}
+            src={scrollimg}
             className="w-8 mx-auto animate-bounce"
             alt="Scroll Down Indicator"
           />

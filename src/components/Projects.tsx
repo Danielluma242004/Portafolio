@@ -4,7 +4,7 @@ export function Projects() {
   const projects = getAllProjects();
 
   return (
-    <div className="flex items-center justify-center pb-10">
+    <div className="flex items-center justify-center pb-10" id="projects">
       <section className="max-w-5xl mx-4 flex flex-col w-full">
         <div className="flex items-center mb-8">
           <div className="h-px bg-gray-400 flex-grow"></div>
@@ -17,9 +17,10 @@ export function Projects() {
               key={project.title}
               className="bg-gray-100 rounded-3xl p-5 md:p-8 text-center"
             >
-              <h3>{project.title}</h3>
               <img src={project.image} alt={project.title} />
+              <h3>{project.title}</h3>
               <p>{project.description}</p>
+              <p>{project.techs}</p>
             </div>
           ))}
         </div>
