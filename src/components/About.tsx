@@ -3,7 +3,7 @@ import cv from "../media/CV-Daniel_Lucio_Mireles_en.pdf";
 
 export function About() {
   return (
-    <div id="about" className="flex justify-center text-white">
+    <div id="about" className="flex justify-center dark:text-white">
       <section className="max-w-5xl mx-4 flex flex-col">
         <div className="flex items-center">
           <div className="h-px bg-gray-400 flex-grow"></div>
