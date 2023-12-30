@@ -4,7 +4,7 @@ import dark_theme from "../media/dark_theme.svg";
 
 export function Navigation() {
   const [isMenuOpen, setMenuOpen] = useState(false);
-  const [offset, setOffset] = useState(-150);
+  const [offset, setOffset] = useState(-50);
 
   const toggleMenu = () => {
     setMenuOpen(!isMenuOpen);
@@ -18,7 +18,7 @@ export function Navigation() {
   useEffect(() => {
     const handleResize = () => {
       // Ajustar el offset según el tamaño de la pantalla
-      const newOffset = window.innerWidth < 768 ? -270 : -100;
+      const newOffset = window.innerWidth < 768 ? -320 : -100;
       setOffset(newOffset);
     };
 
