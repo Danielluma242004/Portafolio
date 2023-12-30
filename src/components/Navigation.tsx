@@ -4,7 +4,7 @@ import dark_theme from "../media/dark_theme.svg";
 
 export function Navigation() {
   const [isMenuOpen, setMenuOpen] = useState(false);
-  const [offset, setOffset] = useState(-50);
+  const [offset, setOffset] = useState(-100);
 
   const toggleMenu = () => {
     setMenuOpen(!isMenuOpen);
