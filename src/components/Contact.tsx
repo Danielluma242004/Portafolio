@@ -16,6 +16,7 @@ export function Contact() {
             action="POST"
             data-netlify="true"
           >
+            {/* <input type="hidden" name="form-name" value="contactForm" /> */}
             <p className="font-bold text-cyan-700 dark:text-cyan-500 text-3xl pb-5 text-center md:text-left">
               Get in touch!
             </p>
