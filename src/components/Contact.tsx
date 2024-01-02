@@ -15,7 +15,6 @@ export function Contact() {
             name="contact"
             method="POST"
             data-netlify="true"
-            action="#"
           >
             <input type="hidden" name="bot-field" />
             <p className="font-bold text-cyan-700 dark:text-cyan-500 text-3xl pb-5 text-center md:text-left">
