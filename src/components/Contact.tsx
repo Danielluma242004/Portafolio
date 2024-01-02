@@ -47,12 +47,12 @@ export function Contact() {
               ></textarea>
             </p>
             <p className="flex justify-center md:justify-end">
-              <button
-                type="submit"
+              <a
+                href="/"
                 className="bg-cyan-500 hover:bg-cyan-600 active:bg-cyan-700 text-white font-bold py-2 px-4 rounded cursor-pointer"
               >
                 Send Message
-              </button>
+              </a>
             </p>
           </form>
         </div>
