@@ -46,11 +46,12 @@ export function Contact() {
             </div>
             <div data-netlify-recaptcha="true"></div>
             <div className="flex justify-center md:justify-end">
-              <input
+              <button
                 type="submit"
-                value="Send Message"
                 className="bg-cyan-500 hover:bg-cyan-600 active:bg-cyan-700 text-white font-bold py-2 px-4 rounded cursor-pointer"
-              />
+              >
+                Send Message
+              </button>
             </div>
           </form>
         </div>
