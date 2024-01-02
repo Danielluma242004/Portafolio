@@ -19,8 +19,8 @@ export function Contact() {
             <p className="font-bold text-cyan-700 dark:text-cyan-500 text-3xl pb-5 text-center md:text-left">
               Get in touch!
             </p>
-            <div className="flex flex-col md:flex-row">
-              <div>
+            <p className="flex flex-col md:flex-row">
+              <p>
                 <input
                   type="text"
                   name="name"
@@ -35,7 +35,7 @@ export function Contact() {
                   placeholder="Email"
                   className="w-full p-2 rounded mb-4  dark:bg-gray-700"
                 />
-              </div>
+              </p>
               <textarea
                 name="message"
                 id="message"
@@ -43,16 +43,15 @@ export function Contact() {
                 rows={3}
                 className="w-full p-2 rounded mb-4 md:ml-4 dark:bg-gray-700"
               ></textarea>
-            </div>
-            <div data-netlify-recaptcha="true"></div>
-            <div className="flex justify-center md:justify-end">
+            </p>
+            <p className="flex justify-center md:justify-end">
               <button
                 type="submit"
                 className="bg-cyan-500 hover:bg-cyan-600 active:bg-cyan-700 text-white font-bold py-2 px-4 rounded cursor-pointer"
               >
                 Send Message
               </button>
-            </div>
+            </p>
           </form>
         </div>
       </section>
