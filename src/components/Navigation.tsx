@@ -104,7 +104,7 @@ export function Navigation() {
                   smooth={true}
                   duration={500}
                   offset={offset}
-                  className="block py-2 px-3 rounded hover:bg-gray-200 md:text-cyan-700 md:p-0 active:bg-cyan-700 active:text-white dark:active:bg-cyan-700 dark:active:text-white active:md:bg-transparent active:md:text-gray-500 cursor-pointer hover:text-cyan-700 dark:hover:text-cyan-500 dark:hover:bg-gray-800"
+                  className="block py-2 px-3 rounded hover:bg-gray-200  md:p-0 active:bg-cyan-700 active:text-white dark:active:bg-cyan-700 dark:active:text-white active:md:bg-transparent active:md:text-cyan-500 cursor-pointer hover:text-cyan-700 dark:hover:text-cyan-500 dark:hover:bg-gray-800 dark:md:active:bg-transparent "
                   onClick={toggleMenu}
                 >
                   about
@@ -116,7 +116,7 @@ export function Navigation() {
                   smooth={true}
                   duration={500}
                   offset={offset}
-                  className="block py-2 px-3 rounded hover:bg-gray-200 md:text-cyan-700 md:p-0 active:bg-cyan-700 active:text-white dark:active:bg-cyan-700 dark:active:text-white active:md:bg-transparent active:md:text-gray-500 cursor-pointer hover:text-cyan-700 dark:hover:text-cyan-500 dark:hover:bg-gray-800"
+                  className="block py-2 px-3 rounded hover:bg-gray-200  md:p-0 active:bg-cyan-700 active:text-white dark:active:bg-cyan-700 dark:active:text-white active:md:bg-transparent active:md:text-cyan-500 cursor-pointer hover:text-cyan-700 dark:hover:text-cyan-500 dark:hover:bg-gray-800 dark:md:active:bg-transparent"
                   onClick={toggleMenu}
                 >
                   projects
@@ -128,7 +128,7 @@ export function Navigation() {
                   smooth={true}
                   offset={offset}
                   duration={500}
-                  className="block py-2 px-3 rounded hover:bg-gray-200 md:text-cyan-700 md:p-0 active:bg-cyan-700 active:text-white dark:active:bg-cyan-700 dark:active:text-white active:md:bg-transparent active:md:text-gray-500 cursor-pointer hover:text-cyan-700 dark:hover:text-cyan-500 dark:hover:bg-gray-800"
+                  className="block py-2 px-3 rounded hover:bg-gray-200  md:p-0 active:bg-cyan-700 active:text-white dark:active:bg-cyan-700 dark:active:text-white active:md:bg-transparent active:md:text-cyan-500 cursor-pointer hover:text-cyan-700 dark:hover:text-cyan-500 dark:hover:bg-gray-800 dark:md:active:bg-transparent"
                   onClick={toggleMenu}
                 >
                   contact

@@ -11,10 +11,10 @@ export function Contact() {
         </div>
         <div className="bg-gray-100 dark:bg-gray-900 rounded-3xl p-5 md:p-8 w-full">
           <form
+            className="m-3 mb-0"
             name="contact"
             action="POST"
             data-netlify="true"
-            className="m-3 mb-0"
           >
             <p className="font-bold text-cyan-700 dark:text-cyan-500 text-3xl pb-5 text-center md:text-left">
               Get in touch!
