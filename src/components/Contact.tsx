@@ -10,7 +10,7 @@ export function Contact() {
           <div className="h-px bg-gray-400 flex-grow"></div>
         </div>
         <div className="bg-gray-100 dark:bg-gray-900 rounded-3xl p-5 md:p-8 w-full">
-          {/* <form
+          <form
             className="m-3 mb-0"
             name="contact"
             method="POST"
@@ -53,32 +53,6 @@ export function Contact() {
               >
                 Send Message
               </button>
-            </p>
-          </form> */}
-          <form
-            name="contact"
-            method="post"
-            data-netlify="true"
-            data-netlify-honeypot="bot-field"
-          >
-            <input type="hidden" name="form-name" value="contact" />
-            <p>
-              <label>
-                Your Name: <input type="text" name="name" />
-              </label>
-            </p>
-            <p>
-              <label>
-                Your Email: <input type="email" name="email" />
-              </label>
-            </p>
-            <p>
-              <label>
-                Message: <textarea name="message"></textarea>
-              </label>
-            </p>
-            <p>
-              <button type="submit">Send</button>
             </p>
           </form>
         </div>

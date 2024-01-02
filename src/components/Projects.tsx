@@ -1,4 +1,5 @@
 import { getAllProjects } from "../api/projects.api";
+import github from "../media/github.svg";
 
 export function Projects() {
   const projects = getAllProjects();
@@ -17,12 +18,36 @@ export function Projects() {
           {projects.map((project) => (
             <div
               key={project.title}
-              className="bg-gray-100 dark:bg-gray-900 rounded-3xl p-5 md:p-8 text-center"
+              className="bg-gray-100 dark:bg-gray-900 rounded-3xl text-center flex flex-col items-center"
             >
-              <img src={project.image} alt={project.title} />
-              <h3>{project.title}</h3>
-              <p>{project.description}</p>
-              <p>{project.techs}</p>
+              <a href={project.linkGit}>
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="mb-3 rounded-t-3xl"
+                />
+              </a>
+              <a className="font-bold" href={project.linkGit}>
+                {project.title}
+              </a>
+              <p className="mb-3">{project.description}</p>
+              <p className="mb-3 font-semibold">Techs:</p>
+              <div className="flex justify-center mb-3">
+                {project.techs.map((tech, index) => (
+                  <img
+                    key={index}
+                    src={tech}
+                    className="size-8 md:size-9 mr-3"
+                  />
+                ))}
+              </div>
+              <button
+                className="mb-4 p-3 bg-cyan-500
+              text-white rounded-lg font-semibold flex"
+              >
+                <img src={github} className="mr-3" />
+                <p>GitHub</p>
+              </button>
             </div>
           ))}
         </div>
