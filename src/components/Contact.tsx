@@ -9,7 +9,7 @@ export function Contact() {
           </h2>
           <div className="h-px bg-gray-400 flex-grow"></div>
         </div>
-        <div className="bg-gray-100 dark:bg-gray-900 rounded-3xl p-5 md:p-8 w-full">
+        <div className="bg-gray-100 dark:bg-gray-800 rounded-3xl p-5 md:p-8 w-full">
           <form
             className="m-3 mb-0"
             name="contact"

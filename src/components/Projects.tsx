@@ -18,7 +18,7 @@ export function Projects() {
           {projects.map((project) => (
             <div
               key={project.title}
-              className="bg-gray-100 dark:bg-gray-900 rounded-3xl text-center flex flex-col items-center"
+              className="bg-gray-100 dark:bg-gray-800 rounded-3xl text-center flex flex-col items-center"
             >
               <a href={project.linkGit}>
                 <img
