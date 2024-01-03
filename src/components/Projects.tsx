@@ -9,7 +9,7 @@ export function Projects() {
       <section className="max-w-5xl mx-4 flex flex-col w-full">
         <div className="flex items-center mb-8">
           <div className="h-px bg-gray-400 flex-grow"></div>
-          <h2 className="mx-4 text-cyan-700 dark:text-cyan-500 font-bold text-xl">
+          <h2 className="mx-4 text-cyan-700 dark:text-cyan-500 font-bold text-xl cursor-default">
             Projects
           </h2>
           <div className="h-px bg-gray-400 flex-grow"></div>
@@ -20,14 +20,23 @@ export function Projects() {
               key={project.title}
               className="bg-gray-100 dark:bg-gray-800 rounded-3xl text-center flex flex-col items-center"
             >
-              <a href={project.linkGit}>
+              <a
+                href={project.linkGit}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <img
                   src={project.image}
                   alt={project.title}
                   className="mb-3 rounded-t-3xl"
                 />
               </a>
-              <a className="font-bold" href={project.linkGit}>
+              <a
+                className="font-bold"
+                href={project.linkGit}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 {project.title}
               </a>
               <p className="mb-3">{project.description}</p>
@@ -41,13 +50,16 @@ export function Projects() {
                   />
                 ))}
               </div>
-              <button
-                className="mb-4 p-3 bg-cyan-500
+              <a
+                className="mb-4 p-3 bg-cyan-500 hover:bg-cyan-600 active:bg-cyan-700 cursor-pointer
               text-white rounded-lg font-semibold flex"
+                href={project.linkGit}
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 <img src={github} className="mr-3" />
                 <p>GitHub</p>
-              </button>
+              </a>
             </div>
           ))}
         </div>

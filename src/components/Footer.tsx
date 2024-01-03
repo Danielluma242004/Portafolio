@@ -6,6 +6,8 @@ export function Footer() {
           <a
             href="http://www.linkedin.com/in/daniel-lucio1"
             className="mr-9 text-neutral-800 dark:text-neutral-200"
+            target="_blank"
+            rel="noopener noreferrer"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -19,6 +21,8 @@ export function Footer() {
           <a
             href="https://github.com/Danielluma242004"
             className="text-neutral-800 dark:text-neutral-200"
+            target="_blank"
+            rel="noopener noreferrer"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"

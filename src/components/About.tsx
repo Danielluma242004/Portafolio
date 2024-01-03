@@ -7,7 +7,7 @@ export function About() {
       <section className="max-w-5xl mx-4 flex flex-col">
         <div className="flex items-center">
           <div className="h-px bg-gray-400 flex-grow"></div>
-          <h2 className="mx-4 text-cyan-700 dark:text-cyan-500 font-bold text-xl">
+          <h2 className="mx-4 text-cyan-700 dark:text-cyan-500 font-bold text-xl cursor-default">
             About me
           </h2>
           <div className="h-px bg-gray-400 flex-grow"></div>
@@ -208,6 +208,8 @@ export function About() {
             <a
               className="bg-cyan-500 hover:bg-cyan-600 active:bg-cyan-700 text-white font-bold mt-5 py-2 px-4 rounded inline-flex items-center"
               href={cv}
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <svg
                 className="fill-current w-4 h-4 mr-2"

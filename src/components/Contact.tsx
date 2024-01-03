@@ -4,7 +4,7 @@ export function Contact() {
       <section className="max-w-5xl mx-4 flex flex-col w-full">
         <div className="flex items-center mb-8">
           <div className="h-px bg-gray-400 flex-grow"></div>
-          <h2 className="mx-4 text-cyan-700 dark:text-cyan-500 font-bold text-xl">
+          <h2 className="mx-4 text-cyan-700 dark:text-cyan-500 font-bold text-xl cursor-default">
             Contact
           </h2>
           <div className="h-px bg-gray-400 flex-grow"></div>

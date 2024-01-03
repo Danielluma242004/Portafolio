@@ -55,7 +55,7 @@ export function Navigation() {
 
   return (
     <div className="sticky top-0 z-50">
-      <nav className="bg-gray-200 dark:bg-gray-800 ">
+      <nav className="bg-gray-200 dark:bg-gray-900 ">
         <header className="flex flex-wrap justify-between items-center py-3 text-lg px-8">
           <ScrollLink
             to="/"
@@ -70,8 +70,8 @@ export function Navigation() {
           <button
             type="button"
             onClick={toggleMenu}
-            className={`inline-flex items-center w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-300 dark:hover:bg-gray-900 active:bg-gray-400 dark:active:bg-gray-950 ${
-              isMenuOpen ? "bg-gray-300 dark:bg-gray-900" : ""
+            className={`inline-flex items-center w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-300 dark:hover:bg-gray-950 active:bg-gray-400 dark:active:bg-gray-800 ${
+              isMenuOpen ? "bg-gray-300 dark:bg-gray-950" : ""
             }`}
             aria-expanded={isMenuOpen}
           >
@@ -97,14 +97,14 @@ export function Navigation() {
               isMenuOpen ? "block" : "hidden"
             }`}
           >
-            <ul className="font-medium flex flex-col justify-center w-full items-center p-4 md:p-2 mt-4 border border-gray-100 rounded-lg bg-gray-50 dark:bg-gray-900 dark:text-white dark:border-gray-900 dark:md:bg-transparent md:bg-transparent md:flex-row md:space-x-11 rtl:space-x-reverse md:mt-0 md:border-0">
+            <ul className="font-medium flex flex-col justify-center w-full items-center p-4 md:p-2 mt-4 border border-gray-100 rounded-lg bg-gray-50 dark:bg-gray-800 dark:text-white dark:border-gray-900 dark:md:bg-transparent md:bg-transparent md:flex-row md:space-x-11 rtl:space-x-reverse md:mt-0 md:border-0">
               <li>
                 <ScrollLink
                   to="about"
                   smooth={true}
                   duration={500}
                   offset={offset}
-                  className="block py-2 px-3 rounded hover:bg-gray-200  md:p-0 active:bg-cyan-700 active:text-white dark:active:bg-cyan-700 dark:active:text-white active:md:bg-transparent active:md:text-cyan-500 cursor-pointer hover:text-cyan-700 dark:hover:text-cyan-500 dark:hover:bg-gray-800 dark:md:active:bg-transparent "
+                  className="block py-2 px-3 rounded hover:bg-gray-200  md:p-0 active:bg-cyan-700 active:text-white dark:active:bg-cyan-700 dark:active:text-white active:md:bg-transparent active:md:text-cyan-500 cursor-pointer hover:text-cyan-700 dark:hover:text-cyan-500 dark:hover:bg-gray-900 dark:md:hover:bg-transparent dark:md:active:bg-transparent "
                   onClick={toggleMenu}
                 >
                   about
@@ -116,7 +116,7 @@ export function Navigation() {
                   smooth={true}
                   duration={500}
                   offset={offset}
-                  className="block py-2 px-3 rounded hover:bg-gray-200  md:p-0 active:bg-cyan-700 active:text-white dark:active:bg-cyan-700 dark:active:text-white active:md:bg-transparent active:md:text-cyan-500 cursor-pointer hover:text-cyan-700 dark:hover:text-cyan-500 dark:hover:bg-gray-800 dark:md:active:bg-transparent"
+                  className="block py-2 px-3 rounded hover:bg-gray-200  md:p-0 active:bg-cyan-700 active:text-white dark:active:bg-cyan-700 dark:active:text-white active:md:bg-transparent active:md:text-cyan-500 cursor-pointer hover:text-cyan-700 dark:hover:text-cyan-500 dark:hover:bg-gray-900 dark:md:active:bg-transparent dark:md:hover:bg-transparent"
                   onClick={toggleMenu}
                 >
                   projects
@@ -128,7 +128,7 @@ export function Navigation() {
                   smooth={true}
                   offset={offset}
                   duration={500}
-                  className="block py-2 px-3 rounded hover:bg-gray-200  md:p-0 active:bg-cyan-700 active:text-white dark:active:bg-cyan-700 dark:active:text-white active:md:bg-transparent active:md:text-cyan-500 cursor-pointer hover:text-cyan-700 dark:hover:text-cyan-500 dark:hover:bg-gray-800 dark:md:active:bg-transparent"
+                  className="block py-2 px-3 rounded hover:bg-gray-200  md:p-0 active:bg-cyan-700 active:text-white dark:active:bg-cyan-700 dark:active:text-white active:md:bg-transparent active:md:text-cyan-500 cursor-pointer hover:text-cyan-700 dark:hover:text-cyan-500 dark:hover:bg-gray-900 dark:md:active:bg-transparent dark:md:hover:bg-transparent"
                   onClick={toggleMenu}
                 >
                   contact
