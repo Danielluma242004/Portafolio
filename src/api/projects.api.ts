@@ -23,20 +23,6 @@ export const getAllProjects = (): Project[] => {
       linkGit: "https://github.com/Danielluma242004/DODOC-WEB",
     },
     {
-      title: "Task App",
-      image:
-        "https://github.com/Danielluma242004/Task_App/assets/145404946/1b5080a7-6160-49d7-86e0-8b2ae96dbf62",
-      description: "Web App developed in Django FrameWork",
-      techs: [
-        "https://cdn.worldvectorlogo.com/logos/django.svg",
-        "https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png",
-        "https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg",
-        "https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg",
-        "https://cdn.worldvectorlogo.com/logos/sqlite.svg",
-      ],
-      linkGit: "https://github.com/Danielluma242004/Task_App",
-    },
-    {
       title: "Movies Scraping",
       image:
         "https://github.com/Danielluma242004/Movies_Scraping/assets/145404946/333ad6cd-b8b7-4493-beb3-a479903cdd43",
@@ -49,6 +35,20 @@ export const getAllProjects = (): Project[] => {
         "https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg",
       ],
       linkGit: "https://github.com/Danielluma242004/Movies_Scraping",
+    },
+    {
+      title: "Task App",
+      image:
+        "https://github.com/Danielluma242004/Task_App/assets/145404946/1b5080a7-6160-49d7-86e0-8b2ae96dbf62",
+      description: "Web App developed in Django FrameWork",
+      techs: [
+        "https://cdn.worldvectorlogo.com/logos/django.svg",
+        "https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png",
+        "https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg",
+        "https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg",
+        "https://cdn.worldvectorlogo.com/logos/sqlite.svg",
+      ],
+      linkGit: "https://github.com/Danielluma242004/Task_App",
     },
   ];
 
