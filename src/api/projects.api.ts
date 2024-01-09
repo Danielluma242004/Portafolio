@@ -36,6 +36,20 @@ export const getAllProjects = (): Project[] => {
       ],
       linkGit: "https://github.com/Danielluma242004/Task_App",
     },
+    {
+      title: "Movies Scraping",
+      image:
+        "https://github.com/Danielluma242004/Movies_Scraping/assets/145404946/333ad6cd-b8b7-4493-beb3-a479903cdd43",
+      description:
+        "Web application developed using Python and TypeScript that performs scraping to retrieve detailed information about movies",
+      techs: [
+        "https://cdn.worldvectorlogo.com/logos/django.svg",
+        "https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg",
+        "https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg",
+        "https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg",
+      ],
+      linkGit: "https://github.com/Danielluma242004/Movies_Scraping",
+    },
   ];
 
   return projects;
