@@ -37,6 +37,22 @@ export const getAllProjects = (): Project[] => {
       linkGit: "https://github.com/Danielluma242004/Movies_Scraping",
     },
     {
+      title: "Django-React-Authentication-App",
+      image:
+        "https://github.com/Danielluma242004/Django-React-Authentication-App/assets/145404946/da5b1f26-ac65-4604-a782-2dc1c52a7ba6",
+      description:
+        "Secure authentication with Django and React. A robust system for managing user registration, login, and authentication sessions. Ideal for web projects requiring efficient authentication and seamless integration between Django backend and React frontend.",
+      techs: [
+        "https://cdn.worldvectorlogo.com/logos/django.svg",
+        "https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg",
+        "https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg",
+        "https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg",
+        "https://cdn.worldvectorlogo.com/logos/sqlite.svg",
+      ],
+      linkGit:
+        "https://github.com/Danielluma242004/Django-React-Authentication-App",
+    },
+    {
       title: "Task App",
       image:
         "https://github.com/Danielluma242004/Task_App/assets/145404946/1b5080a7-6160-49d7-86e0-8b2ae96dbf62",
