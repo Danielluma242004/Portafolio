@@ -28,18 +28,18 @@ export function Projects() {
                 <img
                   src={project.image}
                   alt={project.title}
-                  className="mb-3 rounded-t-3xl"
+                  className="mb-3 rounded-t-3xl w-full md:h-64 lg:h-48 object-cover"
                 />
               </a>
               <a
-                className="font-bold"
+                className="font-bold mt-4"
                 href={project.linkGit}
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 {project.title}
               </a>
-              <p className="mb-3">{project.description}</p>
+              <p className="m-2 h-32 overflow-hidden">{project.description}</p>
               <p className="mb-3 font-semibold">Techs:</p>
               <div className="flex justify-center mb-3">
                 {project.techs.map((tech, index) => (
@@ -51,7 +51,7 @@ export function Projects() {
                 ))}
               </div>
               <a
-                className="mb-4 p-3 bg-cyan-500 hover:bg-cyan-600 active:bg-cyan-700 cursor-pointer
+                className="my-4 p-3 bg-cyan-500 hover:bg-cyan-600 active:bg-cyan-700 cursor-pointer
               text-white rounded-lg font-semibold flex"
                 href={project.linkGit}
                 target="_blank"
