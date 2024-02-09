@@ -12,9 +12,11 @@ export function Contact() {
     try {
       await contactButton(name, email, phone, message);
       emptyInputs();
-      toast.success("Message sent successfully!");
+      toast.success("Message sent successfully!", {
+        className: "dark:bg-gray-800",
+      });
     } catch (error: any) {
-      toast.error(error.message);
+      toast.error(error.message, { className: "dark:bg-gray-800" });
     }
   };
 
@@ -47,21 +49,21 @@ export function Contact() {
                   value={name}
                   onChange={(e) => setName(e.target.value)}
                   placeholder="Name"
-                  className="w-full p-2 rounded mb-4 dark:bg-gray-700"
+                  className="w-full p-2 rounded mb-4 dark:bg-gray-700 dark:text-white"
                 />
                 <input
                   type="email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="Email"
-                  className="w-full p-2 rounded mb-4  dark:bg-gray-700"
+                  className="w-full p-2 rounded mb-4  dark:bg-gray-700 dark:text-white"
                 />
                 <input
                   type="int"
                   value={phone}
                   onChange={(e) => setPhone(e.target.value)}
                   placeholder="Phone"
-                  className="w-full p-2 rounded mb-4  dark:bg-gray-700"
+                  className="w-full p-2 rounded mb-4  dark:bg-gray-700 dark:text-white"
                 />
               </p>
               <textarea
@@ -69,7 +71,7 @@ export function Contact() {
                 value={message}
                 onChange={(e) => setMessage(e.target.value)}
                 rows={3}
-                className="w-full p-2 rounded mb-4 md:ml-4 dark:bg-gray-700"
+                className="w-full p-2 rounded mb-4 md:ml-4 dark:bg-gray-700 dark:text-white"
               ></textarea>
             </p>
             <p className="flex justify-center md:justify-end">
