@@ -1,4 +1,30 @@
+import { useState } from "react";
+import toast from "react-hot-toast";
+import { contactButton } from "../api/contact.api";
+
 export function Contact() {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+  const [phone, setPhone] = useState("");
+
+  const handleMessage = async () => {
+    try {
+      await contactButton(name, email, phone, message);
+      emptyInputs();
+      toast.success("Message sent successfully!");
+    } catch (error: any) {
+      toast.error(error.message);
+    }
+  };
+
+  const emptyInputs = () => {
+    setName("");
+    setEmail("");
+    setMessage("");
+    setPhone("");
+  };
+
   return (
     <div className="flex items-center justify-center pb-10" id="contact">
       <section className="max-w-5xl mx-4 flex flex-col w-full">
@@ -10,14 +36,7 @@ export function Contact() {
           <div className="h-px bg-gray-400 flex-grow"></div>
         </div>
         <div className="bg-gray-100 dark:bg-gray-800 rounded-3xl p-5 md:p-8 w-full">
-          <form
-            className="m-3 mb-0"
-            name="contact"
-            method="POST"
-            data-netlify="true"
-          >
-            <input type="hidden" name="form-name" value="contact" />
-            <input type="hidden" name="bot-field" />
+          <form className="m-3 mb-0">
             <p className="font-bold text-cyan-700 dark:text-cyan-500 text-3xl pb-5 text-center md:text-left">
               <label>Get in touch!</label>
             </p>
@@ -25,34 +44,44 @@ export function Contact() {
               <p>
                 <input
                   type="text"
-                  name="name"
-                  id="name"
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
                   placeholder="Name"
                   className="w-full p-2 rounded mb-4 dark:bg-gray-700"
                 />
                 <input
                   type="email"
-                  name="email"
-                  id="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
                   placeholder="Email"
+                  className="w-full p-2 rounded mb-4  dark:bg-gray-700"
+                />
+                <input
+                  type="int"
+                  value={phone}
+                  onChange={(e) => setPhone(e.target.value)}
+                  placeholder="Phone"
                   className="w-full p-2 rounded mb-4  dark:bg-gray-700"
                 />
               </p>
               <textarea
-                name="message"
-                id="message"
                 placeholder="Message"
+                value={message}
+                onChange={(e) => setMessage(e.target.value)}
                 rows={3}
                 className="w-full p-2 rounded mb-4 md:ml-4 dark:bg-gray-700"
               ></textarea>
             </p>
             <p className="flex justify-center md:justify-end">
-              <a
-                href="/"
+              <button
+                onClick={(e) => {
+                  e.preventDefault();
+                  handleMessage();
+                }}
                 className="bg-cyan-500 hover:bg-cyan-600 active:bg-cyan-700 text-white font-bold py-2 px-4 rounded cursor-pointer"
               >
                 Send Message
-              </a>
+              </button>
             </p>
           </form>
         </div>
