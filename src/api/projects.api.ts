@@ -9,9 +9,23 @@ export interface Project {
 export const getAllProjects = (): Project[] => {
   const projects: Project[] = [
     {
+      title: "TicketCrowd",
+      image:
+        "https://github.com/Danielluma242004/TicketCrowd/assets/145404946/11fc5285-184a-4dd6-bbf6-5a09d0adcd96",
+      description:
+        "A React-Django app for events where users can create sessions, post events, comment, mark attendance, delete their content, and effortlessly browse others' posts.",
+      techs: [
+        "https://cdn.worldvectorlogo.com/logos/django.svg",
+        "https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg",
+        "https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg",
+        "https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg",
+      ],
+      linkGit: "https://github.com/Danielluma242004/TicketCrowd.git",
+    },
+    {
       title: "Movies Scraping",
       image:
-        "https://github.com/Danielluma242004/Movies_Scraping/assets/145404946/333ad6cd-b8b7-4493-beb3-a479903cdd43",
+        "https://github.com/Danielluma242004/Movies_Scraping/assets/145404946/d7497a8e-9b32-4f8e-936f-50c681d87159",
       description:
         "Web application developed using Python and TypeScript that performs scraping to retrieve detailed information about movies",
       techs: [

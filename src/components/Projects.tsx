@@ -18,7 +18,7 @@ export function Projects() {
           {projects.map((project) => (
             <div
               key={project.title}
-              className="bg-gray-100 dark:bg-gray-800 rounded-3xl text-center flex flex-col items-center"
+              className="bg-gray-100 dark:bg-gray-800 rounded-3xl text-center flex flex-col items-center  shadow-xl"
             >
               <a
                 href={project.linkGit}
@@ -32,7 +32,7 @@ export function Projects() {
                 />
               </a>
               <a
-                className="font-bold mt-4"
+                className="font-bold mt-4 text-cyan-600 hover:text-cyan-700 active:text-cyan-800 dark:text-cyan-500"
                 href={project.linkGit}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -40,7 +40,9 @@ export function Projects() {
                 {project.title}
               </a>
               <p className="m-2 h-32 overflow-hidden">{project.description}</p>
-              <p className="mb-3 font-semibold">Techs:</p>
+              <p className="mb-3 font-semibold text-cyan-600 dark:text-cyan-500">
+                Techs:
+              </p>
               <div className="flex justify-center mb-3">
                 {project.techs.map((tech, index) => (
                   <img

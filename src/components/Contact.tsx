@@ -30,14 +30,14 @@ export function Contact() {
   return (
     <div className="flex items-center justify-center pb-10" id="contact">
       <section className="max-w-5xl mx-4 flex flex-col w-full">
-        <div className="flex items-center mb-8">
+        <div className="flex items-center mb-8 ">
           <div className="h-px bg-gray-400 flex-grow"></div>
           <h2 className="mx-4 text-cyan-700 dark:text-cyan-500 font-bold text-xl cursor-default">
             Contact
           </h2>
           <div className="h-px bg-gray-400 flex-grow"></div>
         </div>
-        <div className="bg-gray-100 dark:bg-gray-800 rounded-3xl p-5 md:p-8 w-full">
+        <div className="bg-gray-100 dark:bg-gray-800 rounded-3xl p-5 md:p-8 w-full  shadow-xl">
           <form className="m-3 mb-0">
             <p className="font-bold text-cyan-700 dark:text-cyan-500 text-3xl pb-5 text-center md:text-left">
               <label>Get in touch!</label>
