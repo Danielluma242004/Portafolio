@@ -11,7 +11,7 @@ export const getAllProjects = (): Project[] => {
     {
       title: "TicketCrowd",
       image:
-        "https://github.com/Danielluma242004/TicketCrowd/assets/145404946/11fc5285-184a-4dd6-bbf6-5a09d0adcd96",
+        "https://github.com/Danielluma242004/TicketCrowd/assets/145404946/368e9122-a9f4-4372-8ff2-39cb3923627e",
       description:
         "A React-Django app for events where users can create sessions, post events, comment, mark attendance, delete their content, and effortlessly browse others' posts.",
       techs: [
